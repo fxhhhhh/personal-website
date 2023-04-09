@@ -17,3 +17,136 @@ html{
     --h2-font:3rem;
     --p-font:1rem;
 }
+
+body{
+    background: var(--bg-color);
+    color:var(--text-color)
+}
+header{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    right: 0;
+    display: flex;
+    z-index: 1000;
+    align-items: center;
+    justify-content: space-between;
+    background: transparent;
+    padding: 30px 18%;
+    transition: .3s;
+}
+
+.logo img{
+    max-width: 100%;
+    width: 130px;
+    height: auto;
+}
+
+nav .nav-list{
+    display: flex;
+    justify-content: space-between;
+}
+
+nav .nav-list li{
+    position: relative;
+}
+
+nav .nav-list li a{
+    font-size: var(--p-font);
+    color: var(--text-color);
+    font-weight: 500;
+    padding: 10px;
+}
+
+nav .nav-list li a:hover{
+    color: var(--main-color);
+}
+
+nav .nav-list li a::after{
+    content: '';
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    bottom: -3px;
+    left: 0;
+    transition: ease .3s;
+}
+nav .nav-list li a:hover:after{
+    width: 100%;
+}
+#menu-icon{
+    font-size: 35px;
+    color: var(--text-color);
+    cursor: pointer;
+    z-index: 100001;
+    display: none;
+}
+
+.top-btn{
+    display: inline-block;
+    border-radius: 30px;
+    border: 2px solid var(--main-color);
+    background: transparent;
+    padding: 9px 30px;
+    color: var(--text-color);
+    letter-spacing: normal;
+    font-weight: 500;
+    transition: ease .50s;
+}
+
+
+.top-btn:hover{
+    background: var(--main-color);
+    color: var(--bg-color);
+}
+
+
+section{
+    padding: 100px 18%;
+}
+
+.home{
+    min-height: 100 vh;
+    height: 100%;
+    weight: 100%;
+    background:url(img/background.jpg) ;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    grid-template-columns: repeat(2,1fr);
+    display: grid;
+    align-items: center;
+    grid-gap: 4rem;
+}
+
+.home-text h1{
+	margin: 10px 0px 25px;
+	font-size: var(--big-font);
+	line-height: 1;
+	font-weight: 500;
+}
+
+.home-text h5{
+	margin-bottom: 23px;
+	font-size: 19px;
+	font-weight: 450;
+}
+
+.home-text h3{
+	font-size: 20px;
+	font-weight: 500;
+}
+
+span{
+    color: var(--main-color);
+}
+.home-text p{
+	font-size: var(--p-font);
+	color: var(--secound-color);
+	line-height: 28px;
+	margin-bottom: 20px;
+}
+
+
+
